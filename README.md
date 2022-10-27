@@ -1,2 +1,4 @@
 # cpp-acc
-Educational project - learning C++
+Educational project - learning C++  
+
+Accelerated C++ Koening Moo  

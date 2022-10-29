@@ -1,13 +1,29 @@
 // a small C++ program
 #include <iostream>
+#include <string>
 
 void activateLessonOne();
+void activateLessonStrings();
 
 int main()
 {
-	activateLessonOne();
+	//activateLessonOne();
+	activateLessonStrings();
 	
 	return 0;
+}
+
+void activateLessonStrings()
+{
+	// ask for person's name
+	std::cout << "Please enter your first name: ";
+
+	// read the name
+	std::string name;	// define name
+	std::cin >> name;	// read into
+
+	// write a greeting
+	std::cout << "Hello, " << name << "!" << std::endl;
 }
 
 void activateLessonOne() 

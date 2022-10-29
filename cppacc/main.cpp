@@ -5,14 +5,30 @@
 void activateLessonOne();
 void activateLessonStrings();
 void activateFramingName();
+void activateNamesWithSpaceExercise();
 
 int main()
 {
 	//activateLessonOne();
 	//activateLessonStrings();
-	activateFramingName();
+	//activateFramingName();
+	activateNamesWithSpaceExercise();
 	
 	return 0;
+}
+
+// shows how std::cin reads up to white space and passes chunks as separate
+// reads if they are separated
+void activateNamesWithSpaceExercise()
+{
+	std::cout << "What is your name? ";
+	std::string name;
+	std::cin >> name;
+	std::cout << "Hello, " << name
+		<< std::endl << "And what is yours? ";
+	std::cin >> name;
+	std::cout << "Hello, " << name
+		<< "; nice to meet you too!" << std::endl;
 }
 
 void activateFramingName()

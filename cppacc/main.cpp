@@ -1,14 +1,82 @@
 // a small C++ program
 #include <iostream>
+#include <string>
+
+void activateLessonOne();
+void activateLessonStrings();
+void activateFramingName();
+void activateNamesWithSpaceExercise();
 
 int main()
+{
+	//activateLessonOne();
+	//activateLessonStrings();
+	//activateFramingName();
+	activateNamesWithSpaceExercise();
+	
+	return 0;
+}
+
+// shows how std::cin reads up to white space and passes chunks as separate
+// reads if they are separated
+void activateNamesWithSpaceExercise()
+{
+	std::cout << "What is your name? ";
+	std::string name;
+	std::cin >> name;
+	std::cout << "Hello, " << name
+		<< std::endl << "And what is yours? ";
+	std::cin >> name;
+	std::cout << "Hello, " << name
+		<< "; nice to meet you too!" << std::endl;
+}
+
+void activateFramingName()
+{
+	std::cout << "Please enter your name: ";
+	std::string name;
+	std::cin >> name;
+
+	// build the message that we intend to write
+	const std::string greeting = "Hello, " + name + "!";
+
+	// build the second and fourth lines of the output
+	const std::string spaces(greeting.size(), ' ');
+	const std::string second = "* " + spaces + " *";
+
+	// build the first and fifth lines of the output
+	const std::string first(second.size(), '*');
+
+	// write it all
+	std::cout << std::endl;
+	std::cout << first << std::endl;
+	std::cout << second << std::endl;
+	std::cout << "* " << greeting << " *" << std::endl;
+	std::cout << second << std::endl;
+	std::cout << first << std::endl;
+}
+
+void activateLessonStrings()
+{
+	// ask for person's name
+	std::cout << "Please enter your first name: ";
+
+	// read the name
+	std::string name;	// define name
+	std::cin >> name;	// read into
+
+	// write a greeting
+	std::cout << "Hello, " << name << "!" << std::endl;
+}
+
+void activateLessonOne() 
 {
 	std::cout << "Hello, world!" << std::endl;
 	3 + 4; // this compiles and discards (not yields the result for future chaining)
 	std::cout << "This (\") is a quote, and this (\\) is a backslash." << std::endl;
 	std::cout << "Name:\t\tBond\nSurname:\tJames\nCode:\t\t007\n" << std::endl;
-	
-	std::cout << 
+
+	std::cout <<
 		"// a small C++ program\n"
 		"#include <iostream>\n"
 		"\n"
@@ -18,6 +86,4 @@ int main()
 		"\treturn 0;\n"
 		"}\n"
 		<< std::endl;
-	
-	return 0;
 }
